@@ -3,45 +3,87 @@
 
 class Answer
 
-  def initialize(moduleName,methodName,username,message,channel)
-    @username = username
-    @message  = message
-    @username = username
-    @message  = message
-    @channel  = channel
-    @memory   = Memory.new()
-  end
+    def initialize(moduleName, methodName, username, message, channel)
 
-  def text
-    return Hash["text" => "hello there"]
-  end
+        @username = username
+        @message  = message
+        @username = username
+        @message  = message
+        @channel  = channel
+        @memory   = Memory.new()
 
-  def hello
-    return Hash["text" => "Hello #{@username}, nice to see you."]
-  end
+    end
 
-  def xoka
-    return Hash["text" => "Xoka #{@username}, nice to see you."]
-  end
+    def unknownModule
 
-  def hey
-    return Hash["text" => "hey #{@username}."]
-  end
+        return Hash["text" => "Huh? #{@username}, what do you want me to do?"]
 
-  def hi
-    return Hash["text" => "hi #{@username}!"]
-  end
+    end
 
-  def sorry
-    return Hash["text" => "Don't worry about it *#{@username}*."]
-  end
+    def unknownMethod
 
-  def where
-    return Hash["text" => "You are in *#{@channel}*."]
-  end
+        return Hash["text" => "Huh? Sorry #{@username}, *#{@moduleName}* does not have a method called *#{@methodName}*."]
 
-  def rules
-    return Hash["text" => "Rule #1: You must find yourself a monochromatic avatar.\nRule #2: I, *Ludivine*, am above the law.\n"]
-  end
+    end
+
+    def hello
+
+        return Hash["text" => "Hello #{@username}, nice to see you."]
+
+    end
+
+    def xoka
+
+        return Hash["text" => "Xoka #{@username}, nice to see you."]
+
+    end
+
+    def hey
+
+        return Hash["text" => "hey #{@username}."]
+
+    end
+
+    def hi
+
+        return Hash["text" => "hi #{@username}!"]
+
+    end
+
+    def sorry
+
+        return Hash["text" => "Don't worry about it *#{@username}*."]
+
+    end
+
+    def where
+
+        return Hash["text" => "You are in *#{@channel}*."]
+
+    end
+
+    def rules
+
+        return Hash["text" => "Rule #1: You must find yourself a monochromatic avatar.\nRule #2: I, *Ludivine*, am above the law.\n"]
+
+    end
+
+    def forget
+
+        return Hash["text" => "Ludivine never forgets."]
+
+    end
+
+    def bye
+
+        return Hash["text" => "See you around "+@username+"."]
+
+    end
+
+    def cya
+
+        return Hash["text" => "Bye bye "+@username+"!"]
+
+    end
 
 end
